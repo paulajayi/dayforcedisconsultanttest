@@ -1,0 +1,41 @@
+﻿@model List<EmployeeRateCard.Models.TimeCardViewModel>
+
+@{
+    ViewData["Title"] = "Time Card";
+}
+<div class="text-center">
+    <h1 class="display-4">Time Card</h1>
+    <table class="table table-bordered mt-4">
+        <thead>
+            <tr>
+
+                <th>Id</th>
+                <th>Employee Name</th>
+                <th>Employee Number</th>
+                <th>Date Worked</th>
+                <th>Employee Code</th>
+                <th>Job Worked</th>
+                <th>Dept Worked</th>
+                <th>Hours</th>
+                <th>Rate</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.EmployeeName</td>
+                    <td>@item.DateWorked.ToString("MM/dd/yyyy")</td>
+                    <td>@item.EarningsCode</td>
+                    <td>@item.JobWorked</td>
+                    <td>@item.DeptWorked</td>
+                    <td>@item.Hours</td>
+                    <td>@item.Rate</td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>

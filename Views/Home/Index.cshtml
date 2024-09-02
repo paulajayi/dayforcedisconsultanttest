@@ -1,0 +1,41 @@
+﻿@model List<EmployeeRateCard.Models.PaySummaryViewModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Summary</h1>
+    <table class="table table-bordered mt-4">
+        <thead>
+            <tr>
+
+                <th>EmployeeName</th>
+                <th>EmployeeNumber</th>
+                <th>EarningsCode</th>
+                <th>TotalHours</th>
+                <th>TotalPayAmount</th>
+                <th>RateOfPay</th>
+                <th>Job</th>
+                <th>Dept</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.EmployeeName</td>
+                    <td>@item.EmployeeNumber</td>
+                    <td>@item.EarningsCode</td>
+                    <td>@item.TotalHours</td>
+                    <td>@item.TotalPayAmount</td>
+                    <td>@item.RateOfPay</td>
+                    <td>@item.Job</td>
+                    <td>@item.Dept</td>
+                </tr>
+
+            }
+        </tbody>
+    </table>
+
+</div>
